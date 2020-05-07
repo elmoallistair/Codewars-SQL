@@ -17,7 +17,7 @@ and join to the `companies` table so that you can return the company name.
 You should return all product fields as well as the company name as "company_name".
 > NOTE: You're solution should use pure SQL. Ruby is used within the test cases to do the actual testing.
 
-# Solution
+## Solution
 ```
 SELECT    
   p.*,
