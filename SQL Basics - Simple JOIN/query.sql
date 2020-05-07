@@ -1,4 +1,4 @@
--- Written: 6-May-2020
+-- Written: 06-May-2020
 -- https://www.codewars.com/kata/5802e32dd8c944e562000020/train/sql
 
 SELECT    
