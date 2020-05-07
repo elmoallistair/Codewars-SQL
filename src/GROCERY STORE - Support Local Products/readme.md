@@ -21,3 +21,58 @@ Order by number of products, descending.
 **results table schema**
 * products
 * country
+
+## Solution
+```
+SELECT
+  COUNT(*) AS products,
+  country
+FROM products
+WHERE 
+  country IN ('United States of America', 'Canada')
+GROUP BY country
+ORDER BY products DESC;
+```
+
+## Sample Tests
+```
+results = run_sql
+
+describe :query do
+  describe :syntax do
+    it "should contain SELECT" do
+      expect($sql.upcase).to include("SELECT")
+    end
+    
+    it "should contain GROUP BY" do
+      expect($sql.upcase).to include("GROUP BY")
+    end
+    
+    it "should contain WHERE" do
+      expect($sql.upcase).to include("WHERE")
+    end
+    
+    it "should order results" do
+      expect($sql.upcase).to include("ORDER BY")
+    end
+    
+    it "should contain IN" do
+      expect($sql.upcase).to include("IN")
+    end
+  end
+
+  describe :columns do
+    it "should return 2 columns" do
+      expect(results.first.keys.count).to eq 2
+    end
+    
+    it "should contain products column" do
+      expect(results.first.keys).to include(:products)
+    end
+    
+    it "should contain country column" do
+      expect(results.first.keys).to include(:country)
+    end
+  end
+end
+```
