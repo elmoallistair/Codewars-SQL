@@ -1,2 +1,2 @@
-# Codewars-Kotlin
-Coding challenges | Kotlin
+# Codewars-SQL
+Coding challenges | SQL
