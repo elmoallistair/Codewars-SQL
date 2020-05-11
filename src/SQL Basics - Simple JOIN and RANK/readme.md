@@ -1,4 +1,4 @@
-# SQL Basics - Simple JOIN and RANK
+# SQL Basics: Simple JOIN and RANK
 
 For this challenge you need to create a simple SELECT statement that will return all columns from the `people` table, and join to the `sales` table so that you can return the COUNT of all sales and RANK each person by their sale_count.
 
@@ -26,7 +26,7 @@ SELECT
 FROM people as p
 JOIN sales as s
   ON p.id = s.people_id
-GROUP BY p.id
+GROUP BY p.id;
 ```
 
 ## Sample Tests

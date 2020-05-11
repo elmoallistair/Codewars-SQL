@@ -23,13 +23,12 @@ For this challenge you need to create a UNION statement, there are two tables `u
 
 ## Solution
 ```
-ALTER TABLE ussales ADD COLUMN location VARCHAR(2) DEFAULT 'US';
-ALTER TABLE eusales ADD COLUMN location VARCHAR(2) DEFAULT 'EU';
-
-SELECT * FROM ussales WHERE price > 50.00
-UNION ALL
-SELECT * FROM eusales WHERE price > 50.00
-ORDER BY location DESC, id
+SELECT * FROM (
+  SELECT *, 'US' AS location FROM ussales 
+  UNION ALL
+  SELECT *, 'EU' AS location FROM eusales
+) sales
+WHERE sales.price > 50.00;
 ```
 
 ## Sample Tests

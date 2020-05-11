@@ -10,6 +10,7 @@ Timmy works for a statistical analysis company and has been given a task of tota
 * sale_count (type: int)
 
 **Tables and relationship below:**
+
 ![img](https://i.imgur.com/kBkwsbi.png)
 
 ## Solution

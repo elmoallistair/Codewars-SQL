@@ -1,4 +1,4 @@
-# SQL Basics - Simple EXIST
+# SQL Basics: Simple EXIST
 
 For this challenge you need to create a SELECT statement, this SELECT statement will use an EXISTS to check whether a department has had a sale with a price over 98.00 dollars.
 
@@ -32,7 +32,7 @@ WHERE EXISTS (
   WHERE (
     departments.id = sales.department_id AND price > 98.00
   )
-)
+);
 ```
 
 ## Sample Tests
