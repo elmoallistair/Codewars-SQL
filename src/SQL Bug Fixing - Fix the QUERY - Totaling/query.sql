@@ -8,7 +8,7 @@ SELECT
 FROM department d
   INNER JOIN sale s
   ON d.id = s.department_id
-GROUP BY 
-  day, 
-  d.name
-ORDER BY day ASC;
+	GROUP BY 
+  	day, 
+  	d.name
+	ORDER BY day ASC;

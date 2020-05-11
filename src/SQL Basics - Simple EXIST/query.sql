@@ -2,7 +2,8 @@
 -- https://www.codewars.com/kata/58113a64e10b53ec36000293/train/sql
 
 SELECT 
-  id, name
+  id, 
+  name
 FROM departments
 WHERE EXISTS (
   SELECT department_id

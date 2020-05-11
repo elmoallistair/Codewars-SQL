@@ -7,6 +7,6 @@ SELECT
   COUNT(s.sale) as sale_count,
   RANK() OVER (ORDER BY COUNT(s.sale)) as sale_rank
 FROM people as p
-JOIN sales as s
+	JOIN sales as s
   ON p.id = s.people_id
-GROUP BY p.id
+	GROUP BY p.id;
